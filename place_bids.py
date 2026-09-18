@@ -41,10 +41,10 @@ import json
 import time
 import requests
 
-freelancer_oauth_token = "Cw5YFE8Z9lOSZ1ow3Ldl8kFmg8jtW5"
-chat_id = "597759575"
+freelancer_oauth_token = os.environ.get("FLN_OAUTH_TOKEN", "")
+chat_id = os.environ.get("TELEGRAM_CHAT_ID", "")
 
-BOT_TOKEN = "7205303595:AAH8N9lJuTV6PESVbyYMEkJ1p4yvAXyR94s"
+BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "")
 base_url = "https://api.telegram.org/bot" + BOT_TOKEN
 offset = 0
 
